@@ -1,4 +1,4 @@
-"""RaceData: F1 + MotoGP race analytics in one SQLite database.
+"""Horsepower Stats: F1 + MotoGP race analytics in one SQLite database.
 
 Run:
   python app.py demo
@@ -294,7 +294,7 @@ def compare_series(connection):
 
 def interactive(connection):
     while True:
-        print('\n=== RACEDATA | FORMULA 1 + MOTOGP ===')
+        print('\n=== Horsepower Stats | FORMULA 1 + MOTOGP ===')
         print('1. Analyze a championship / season')
         print('2. Compare F1 and MotoGP win rates')
         print('3. Import real race results')

@@ -1,4 +1,4 @@
-"""Streamlit website for the RaceData F1 + MotoGP analysis project.
+"""Streamlit website for the Horsepower Stats F1 + MotoGP analysis project.
 
 Run: python -m streamlit run streamlit_app.py
 """
@@ -12,7 +12,7 @@ import streamlit as st
 
 from app import DB, connect, get_data, import_real, load_demo, competitor_analysis, team_analysis, manufacturer_analysis
 
-st.set_page_config(page_title="RaceData | Motorsport Analytics", page_icon="🏁", layout="wide")
+st.set_page_config(page_title="Horsepower Stats | Motorsport Analytics", page_icon="🏁", layout="wide")
 st.markdown("""
 <style>
     .stApp { background: #0b101a; color: #e8edf7; }
@@ -67,7 +67,7 @@ def show_fig(fig):
     plt.close(fig)
 
 
-st.sidebar.markdown("## 🏁 RaceData")
+st.sidebar.markdown("## 🏁 Horsepower Stats")
 st.sidebar.caption("Formula 1 + MotoGP • One SQLite database")
 
 with st.sidebar.expander("Add race data", expanded=False):
@@ -91,7 +91,7 @@ with st.sidebar.expander("Add race data", expanded=False):
 
 catalog = dataset_catalog()
 st.markdown('<div class="eyebrow">Motorsport intelligence</div>', unsafe_allow_html=True)
-st.title("RaceData 🏁")
+st.title("Horsepower Stats 🏁")
 st.markdown('<p class="subhead">Analyze drivers, riders, teams and manufacturers across Formula 1 and MotoGP.</p>', unsafe_allow_html=True)
 
 if catalog.empty:
@@ -213,7 +213,7 @@ with raw_tab:
     st.dataframe(df.sort_values(["race_date", "race_name", "position"],
                                 na_position="last"), hide_index=True, use_container_width=True)
     st.download_button("Download filtered results (CSV)", df.to_csv(index=False),
-                       file_name=f"racedata_{series.lower().replace(' ', '_')}_{season}.csv", mime="text/csv")
+                       file_name=f"Horsepower Stats_{series.lower().replace(' ', '_')}_{season}.csv", mime="text/csv")
 
 st.divider()
-st.caption(f"RaceData • Pandas + SQLite + Matplotlib + Streamlit • Database: {DB.name} • Main-race points only")
+st.caption(f"Horsepower Stats • Pandas + SQLite + Matplotlib + Streamlit • Database: {DB.name} • Main-race points only")
