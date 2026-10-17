@@ -1,0 +1,23 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local database
+motorsport.db
+
+# Environment variables
+.env
+.env.*
+
+# Test cache
+.pytest_cache/
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
